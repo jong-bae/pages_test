@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWS 권한별 대시보드 시안</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: #f5f7fa; color: #213348; font: 15px/1.7 "Malgun Gothic", sans-serif; }
+    header, main { max-width: 1480px; margin: auto; padding: 28px 24px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { margin: 8px 0; }
+    header p, .meta { color: #5f7185; }
+    nav { position: sticky; top: 0; z-index: 1; padding: 14px 24px; background: #fff; border-block: 1px solid #e3e8ee; }
+    nav div { max-width: 1432px; margin: auto; display: flex; gap: 24px; flex-wrap: wrap; }
+    a { color: #0072bc; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #0072bc; outline-offset: 5px; }
+    section { margin-bottom: 56px; }
+    h2 { margin: 0; font-size: 22px; }
+    .caption { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    img { display: block; width: 100%; height: auto; margin-top: 16px; border: 1px solid #e3e8ee; }
+    footer { padding: 0 24px 36px; text-align: center; color: #5f7185; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SWS 권한별 대시보드 시안</h1>
+    <p>공통 공지·업데이트와 Fomantic UI 카드 구성을 이어가는 4개 권한별 이미지 시안입니다.</p>
+    <p>2026.10.19 · 예시 데이터 · 이미지 검토용 자료입니다. 화면 속 버튼과 차트는 동작하지 않습니다.</p>
+  </header>
+  <nav aria-label="권한별 시안 이동">
+    <div>
+      <a href="#admin">관리자 / 운영자</a>
+      <a href="#support">고객지원</a>
+      <a href="#nursing">간호</a>
+      <a href="#frontoffice">원무</a>
+      <a href="README.md">데이터 구성·설계 메모</a>
+    </div>
+  </nav>
+  <main>
+    <section id="admin" aria-labelledby="admin-title">
+      <div class="caption"><h2 id="admin-title">관리자 / 운영자</h2><a href="admin-operator.png" target="_blank" rel="noopener">원본 이미지 열기</a></div>
+      <p class="meta">총 사용자·현재 접속자·오늘 로그인 사용자·비활성 계정, 접속 추이 및 권한그룹별 사용자 현황.</p>
+      <a href="admin-operator.png" target="_blank" rel="noopener"><img src="admin-operator.png" alt="상단 공지와 업데이트, 사용자 지표 4개, 접속 추이 차트와 권한그룹별 막대 차트가 있는 관리자 운영자 대시보드 시안"></a>
+    </section>
+    <section id="support" aria-labelledby="support-title">
+      <div class="caption"><h2 id="support-title">고객지원</h2><a href="customer-support.png" target="_blank" rel="noopener">원본 이미지 열기</a></div>
+      <p class="meta">여러 메뉴의 신규 접수를 하나의 목록으로 모아 확인하고, 하단에서 예약 접수·처리 통계를 확인합니다.</p>
+      <a href="customer-support.png" target="_blank" rel="noopener"><img src="customer-support.png" loading="lazy" alt="고객지원 신규 건을 메뉴별로 나누지 않고 하나의 표에 모으고 하단에 예약 접수 처리 통계를 배치한 시안"></a>
+    </section>
+    <section id="nursing" aria-labelledby="nursing-title">
+      <div class="caption"><h2 id="nursing-title">간호</h2><a href="nursing.png" target="_blank" rel="noopener">원본 이미지 열기</a></div>
+      <p class="meta">초진유선상담, 초진전화약신청, 온라인 입원상담관리, 초진예약 요청관리, 공통이벤트 신청관리, 유공자/유가족 의료지원 고객.</p>
+      <a href="nursing.png" target="_blank" rel="noopener"><img src="nursing.png" loading="lazy" alt="간호 업무 6개 메뉴를 3열 2행 카드로 배치하고 각 카드에 처리 필요 건수와 바로가기를 표시한 시안"></a>
+    </section>
+    <section id="frontoffice" aria-labelledby="frontoffice-title">
+      <div class="caption"><h2 id="frontoffice-title">원무</h2><a href="front-office.png" target="_blank" rel="noopener">원본 이미지 열기</a></div>
+      <p class="meta">TA/산재 상담, 응급출동119, 연말정산 접수관리의 처리 대기 건수를 메뉴당 하나의 카드로 표시합니다.</p>
+      <a href="front-office.png" target="_blank" rel="noopener"><img src="front-office.png" loading="lazy" alt="원무 업무 3개 카드와 처리 기준 안내. 연말정산은 한방 또는 양방 미처리 접수를 중복 제외하여 집계하는 시안"></a>
+    </section>
+  </main>
+  <footer>이미지와 공지 내용·통계·환자명은 모두 디자인 검토를 위한 예시입니다. 상세 메뉴 및 집계 기준은 README.md를 참고하세요.</footer>
+</body>
+</html>
